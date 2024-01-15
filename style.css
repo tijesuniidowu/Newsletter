@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --Tomato: hsl(4, 100%, 67%);
+  --Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --Charcoal-Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+  --Roboto: "Roboto", "sans serif";
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--Charcoal-Grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--Roboto);
+}
+
+main {
+  width: 700px;
+  display: flex;
+  max-width: 90%;
+  background-color: var(--White);
+  border-radius: 24px;
+  padding: 20px;
+}
+
+.left {
+   width: 55%;
+  align-items: center;
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 55px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+label{
+    margin-bottom: 8px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+input{
+    font-family: inherit;
+    padding: 10px 20px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid var(--Grey);
+}
+
+button{
+    font-family: inherit;
+    padding: 15px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: var(--White);
+    background-color: var(--Dark-Slate-Grey); 
+}
+
+button:hover{
+    background-color: var(--Tomato);
+    transition: 0.5s linear;
+}
+
+.right {
+  width: 45%;
+}
+
+.right img {
+  width: 100%;
+}
+
+ul {
+  list-style-image: url(./assets/images/icon-success.svg);
+  padding: 0 0 0 28px;
+}
+
+li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0 0 0 12px;
+}
+
+@media screen and (max-width: 700px){
+  body{
+    padding: 0;
+    margin: 0;
+  }
+
+  main{
+      flex-direction: column-reverse;
+      max-width: 100%;
+      padding: 0;
+      border-radius: 0;
+      overflow-x: hidden;
+  }
+
+  .right {
+    width: 100%;
+  }
+
+  .right img{
+    content: url(./assets/images/illustration-sign-up-mobile.svg);
+  }
+
+  .left{
+    width: 90%;
+    padding: 0 20px;
+    align-items: center;
+  }
+
+  h1{
+    font-size: 40px;
+  }
+
+  form{
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 400px){
+h1{
+  font-size: 30px;
+}
+
+p{
+  padding: 0 20px 0 0;
+}
+
+li{
+  padding: 0 28px 0 0;
+}
+}
